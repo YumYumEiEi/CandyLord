@@ -217,4 +217,11 @@ class PlayerTest {
         testPlayer.beginningOfDay();
         assertEquals(25, testPlayer.getHealth());
     }
+
+    @Test
+    void shouldBeAbleToAddMoneyToPlayerCash(){
+        testPlayer.setCash(0);
+        testPlayer.addCash(1000);
+        assertEquals(1000, testPlayer.getCash());
+    }
 }

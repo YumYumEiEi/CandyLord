@@ -14,6 +14,15 @@ public class CandyList implements CandyContainer {
         candyList = new HashMap();
         capacity = 10;
     }
+
+    public static CandyContainer getFilledList() throws TooManyItemsException {
+        CandyList list = new CandyList();
+        for (Candy candy : Candy.values()) {
+            list.addCandy(candy, 0);
+        }
+        return list;
+    }
+
     @Override
     public void addCandy(Candy candy, int amount) throws TooManyItemsException {
         if(!isThereEnoughtSpace(amount)){

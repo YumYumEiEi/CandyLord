@@ -3,8 +3,10 @@ package org.util;
 import org.candy.Candy;
 import org.candy.CandyContainer;
 import org.candy.CandyList;
+import org.loanShark.Janitor;
 import org.location.Location;
 import org.location.School;
+import org.player.Player;
 
 public class TestUtil {
     public static final long TEST_CANDY_PRICE = 100;
@@ -24,5 +26,9 @@ public class TestUtil {
 
     public static School getAnotherTestLocation() {
         return new School("Another Test School", TEST_LOCATION_TRAVEL_PRICE);
+    }
+
+    public static Player getTestPlayer() {
+        return new Player("Test", getTestLocation(), getTestCandyContainer());
     }
 }

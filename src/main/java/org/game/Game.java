@@ -1,5 +1,8 @@
 package org.game;
 
+import org.candy.CandyContainer;
+import org.candy.CandyList;
+import org.location.School;
 import org.player.Player;
 
 public class Game {
@@ -8,4 +11,5 @@ public class Game {
     private Player player;
 
     private int timer;
+
 }
